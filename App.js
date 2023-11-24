@@ -14,20 +14,38 @@ function App() {
         <Stack.Screen
           name="Roles"
           component={role}
+          options={{ 
+            title: 'Roles',
+            headerTransparent: true,
+            headerTitleAlign: 'center'
+          }}
         />
         <Stack.Screen
           name="Teacher"
           component={Teacher}
-          options={{ title: 'Profesor'}}
+          options={{ 
+            title: 'Profesor',
+            headerTransparent: true,
+            headerTitleAlign: 'center'
+          }}
         />
         <Stack.Screen
           name="Student"
           component={Student}
-          options={{ title: 'Alumno'}}
+          options={{ 
+            title: 'Alumno',
+            headerTransparent: true,
+            headerTitleAlign: 'center'
+          }}
         />
         <Stack.Screen
           name="Info"
           component={Info}
+          options={{ 
+            title: 'Contacto',
+            headerTransparent: true,
+            headerTitleAlign: 'center'
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

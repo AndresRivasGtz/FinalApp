@@ -10,7 +10,7 @@ const profes = [
         categories: 'Dr. Ciencias Religiosas',
         availability: '8:30 PM',
         distance: '3.7 km',
-        image: require('./assets/pexels-stefan-stefancik-91227.jpg'),
+        image: require('./assets/prof1.png'),
         id: 1,
     },
     {
@@ -18,7 +18,7 @@ const profes = [
         categories: 'Mtro. Inteligencia Artificial',
         availability: '10:00 AM',
         distance: '4.1 km',
-        image: require('./assets/pexels-ekaterina-belinskaya-4923049.jpg'),
+        image: require('./assets/prof2.jpg'),
         id: 2,
     },
     {
@@ -26,7 +26,7 @@ const profes = [
         categories: 'Prof. Aleman',
         availability: '1:00 PM',
         distance: '3 km',
-        image: require('./assets/pexels-moose-photos-556068.jpg'),
+        image: require('./assets/prof3.jpg'),
         id: 3,
     },
 ];
@@ -49,12 +49,12 @@ function Student({ navigation }){
 
     return(
         <View style= {styles.container}>
-            <ImageBackground source={bckgnd}>
+            <ImageBackground source={bckgnd}  resizeMode='contain'>
                 <FlatList
                     data={profes}
                     renderItem={({ item }) => {
                         return (
-                            <TouchableOpacity onPress={() => navigation.navigate("Info", {nom: item.name})}>
+                            <TouchableOpacity onPress={() => navigation.navigate("Info", {nom: item.name, img: item.image, role: false})}>
                                 <Card info={item}/>
                             </TouchableOpacity>
                         );
@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
         flex: 2,
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: 100,
     },
     image: {
         flex: 1,

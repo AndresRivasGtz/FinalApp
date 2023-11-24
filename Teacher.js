@@ -24,7 +24,7 @@ const alumnos = [
         id: 2,
     },
     {
-        name: 'Super shy',
+        name: 'Jannet Sui',
         categories: 'Contaduría',
         availability: '1:00 PM',
         distance: '3 km',
@@ -50,13 +50,14 @@ function Teacher({ navigation }){
     }
 
     return(
+        
         <View style= {styles.container}>
-            <BackgroundImage source={bckgnd}>
+            <BackgroundImage source={bckgnd}  resizeMode='contain'>
             <FlatList
                 data={alumnos}
                 renderItem={({ item }) => {
                     return (
-                        <TouchableOpacity onPress={() => navigation.navigate("Info", {nom: item.name})}>
+                        <TouchableOpacity onPress={() => navigation.navigate("Info", {nom: item.name, img: item.image, role: true})}>
                             <Card info={item}/>
                         </TouchableOpacity>
                     );
@@ -67,14 +68,20 @@ function Teacher({ navigation }){
             <StatusBar style='auto'/>
             </BackgroundImage>
         </View>
+        
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 2,
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: 100,
+    },
+    image: {
+        flex: 1,
+        backgroundColor: '#DEE9F7',
     },
 });
 
