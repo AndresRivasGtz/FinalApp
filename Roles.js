@@ -12,6 +12,10 @@ function Roles({navigation}) {
         title='Profesor'
         onPress={() => navigation.navigate("Teacher")}
       />
+      <Button
+        title='Estudiante'
+        onPress={() => navigation.navigate("Student")}
+      />
       <StatusBar style='auto'/>
     </View>
   );
@@ -30,10 +34,3 @@ const styles = StyleSheet.create({
 });
 
 export default Roles;
-
-/*
-      <Button
-        title='Alumno'
-        onPress={() => navigation.navigate("Student")}
-      />
-*/

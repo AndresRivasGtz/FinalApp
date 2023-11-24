@@ -1,5 +1,6 @@
 import role from "./Roles";
 import Teacher from "./Teacher";
+import Student from "./Student";
 import Info from "./Info";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -20,6 +21,11 @@ function App() {
           options={{ title: 'Profesor'}}
         />
         <Stack.Screen
+          name="Student"
+          component={Student}
+          options={{ title: 'Alumno'}}
+        />
+        <Stack.Screen
           name="Info"
           component={Info}
         />
@@ -31,10 +37,6 @@ function App() {
 export default App;
 /*
 
-        <Stack.Screen
-          name="Student"
-          component={Student}
-          options={{ title: 'Alumno'}}
-        />
+        
         
 */
