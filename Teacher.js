@@ -56,7 +56,7 @@ function Teacher({ navigation }){
                 data={alumnos}
                 renderItem={({ item }) => {
                     return (
-                        <TouchableOpacity onPress={() => navigation.navigate("Info")}>
+                        <TouchableOpacity onPress={() => navigation.navigate("Info", {nom: item.name})}>
                             <Card info={item}/>
                         </TouchableOpacity>
                     );
